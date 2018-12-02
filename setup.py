@@ -7,7 +7,7 @@ requires = ['awscli>=1.14.0']
 setup(
     name='awscli-as-session',
     packages=['awscli_as_session'],
-    version='0.1',
+    version='0.2',
     description='aws-cli plugin that invokes commands with creds set',
     long_description=open('README.md').read(),
     author='Transposit',
