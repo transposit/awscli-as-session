@@ -27,7 +27,7 @@ class AsSession(BasicCommand):
 
         credentials = self._session.get_credentials()
         env = os.environ
-        del env['AWS_PROFILE']
+        env.pop('AWS_PROFILE', None)
         env['AWS_ACCESS_KEY_ID'] = credentials.access_key
         env['AWS_SECRET_ACCESS_KEY'] = credentials.secret_key
         if credentials.token:
