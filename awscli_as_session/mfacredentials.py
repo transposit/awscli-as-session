@@ -63,7 +63,7 @@ class MFACredentials(BasicCommand):
             'Expiration': response['Credentials']['Expiration']
         }
 
-        print json.dumps(credentials)
+        print(json.dumps(credentials))
 
         return 0
 

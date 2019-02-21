@@ -2,8 +2,8 @@
 # Copyright 2018 Transposit Corporation. All Rights Reserved.
 #
 
-from assession import AsSession
-from mfacredentials import MFACredentials
+from .assession import AsSession
+from .mfacredentials import MFACredentials
 
 
 def awscli_initialize(cli):
