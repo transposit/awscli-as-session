@@ -74,7 +74,8 @@ class MFACredentials(BasicCommand):
         serial = mfas['MFADevices'][0]['SerialNumber']
 
         prompt = 'Enter MFA code for %s: ' % serial
-        token_code = getpass.getpass(prompt, os.fdopen(0, 'w'))
+
+        token_code = getpass.getpass(prompt)
 
         token = self._session.create_client('sts').get_session_token(
             DurationSeconds=60*60, SerialNumber=serial, TokenCode=token_code)
